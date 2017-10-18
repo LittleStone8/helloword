@@ -5,7 +5,7 @@ security:
     name: user
     password: password123
 server:
-  port: 8763
+  port: 8761
 eureka:
   client:
     register-with-eureka: false
