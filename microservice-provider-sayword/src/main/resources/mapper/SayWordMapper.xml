@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmuch.cloud.study.service.mapper.SayWordMapper">
+
+    <select id="Sayword" resultMap="SaywordResultMap">
+			select * from sayword where sayword.id=#{id}
+    </select>
+    <resultMap id="SaywordResultMap" type="com.itmuch.cloud.study.entity.SayWord">
+        <result property="id" column="id"/>
+        <result property="say" column="say"/>
+        <result property="version" column="version"/>
+    </resultMap>
+</mapper>

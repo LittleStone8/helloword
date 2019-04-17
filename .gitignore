@@ -1,32 +1,19 @@
-# maven ignore
+*.class
 target/
-*.jar
-*.war
-*.zip
-*.tar
-*.tar.gz
 
-# eclipse ignore
-.settings/
-.project
+
+# Eclipse project files
 .classpath
+.project
+.settings
 
-# idea ignore
-.idea/
-*.ipr
+# IDEA metadata and output dirs
 *.iml
+*.ipr
 *.iws
+.idea/
 
-# temp ignore
-*.log
-*.cache
-*.diff
-*.patch
-*.tmp
-
-# system ignore
-.DS_Store
-Thumbs.db
-
-# else
+# gitbook
+_book
+tmp
 .springBeans

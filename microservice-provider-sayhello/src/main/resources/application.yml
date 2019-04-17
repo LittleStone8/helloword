@@ -1,0 +1,32 @@
+server:
+  port: 8100
+spring:
+  application:
+    name: microservice-provider-sayhello
+  jpa:
+    database: mysql
+  datasource:                           # 指定数据源
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://120.79.171.176:3306/helloword_hello?characterEncoding=utf8&useSSL=false
+    username: admin
+    password: blissmall
+  redis:
+    host: 47.95.205.113
+    port: 6379
+    password: pmostc@123
+logging:                                # 配置日志级别，让hibernate打印出执行的SQL
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mapper/config/sqlMapConfig.xml
+  type-aliases-package: com.itmuch.cloud.study.entity
