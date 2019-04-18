@@ -6,6 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 import com.netflix.discovery.shared.Application;
 
@@ -16,6 +17,7 @@ import com.netflix.discovery.shared.Application;
 @SpringBootApplication
 @EnableEurekaServer
 @EnableConfigServer
+@EnableZuulProxy
 public class EurekaApplication extends SpringBootServletInitializer{
 	
 	@Override
